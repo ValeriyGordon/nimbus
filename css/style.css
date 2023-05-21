@@ -488,6 +488,7 @@
     font-weight: 600;
     font-size: 26px;
     line-height: 31px;
+    z-index: -1;
   }
 
   .services__list {
@@ -502,6 +503,7 @@
     border-radius: 24px;
     box-shadow: 12px 12px 50px rgba(0, 0, 0, 0.1);
     background-color: var(--color-white-bg);
+    z-index: 1000;
   }
 
   .services__list-item:hover {
@@ -1463,6 +1465,14 @@
       padding: 20px 16px;
     }
 
+    .services {
+      overflow-x: scroll;
+    }
+
+    .services::-webkit-scrollbar {
+      width: 0;
+    }
+
     .services__title {
       margin-bottom: 30px;
       font-size: 20px;
@@ -1473,10 +1483,12 @@
       width: 1260px;
       flex-wrap: nowrap;
       justify-content: flex-start;
+      scroll-snap-type: x mandatory;
     }
 
     .services__list-item {
       margin-right: 20px;
+      scroll-snap-align: start;
     }
 
     .services__list-item:last-child {
@@ -1606,6 +1618,11 @@
 
     .ourteam {
       margin-bottom: 80px;
+      overflow-x: scroll;
+    }
+
+    .ourteam::-webkit-scrollbar {
+      width: 0;
     }
     
     .ourteam__title {
@@ -1618,11 +1635,12 @@
       width: 815px;
       display: flex;
       justify-content: space-between;
-
+      scroll-snap-type: x mandatory;
     }
 
     .ourteam__list-item {
       width: 255px;
+      scroll-snap-align: start;
     }
 
     .ourteam__inner {
@@ -1670,6 +1688,11 @@
 
     .articles {
       margin-bottom: 30px;
+      overflow-x: scroll;
+    }
+
+    .articles::-webkit-scrollbar {
+      width: 0;
     }
 
     .articles__title {
@@ -1686,10 +1709,12 @@
 
     .articles__list {
       width: 599px;
+      scroll-snap-type: x mandatory;
     }
     
     .articles__list-item {
       width: 287px;
+      scroll-snap-align: start;
     }
 
     .articles__list-item:last-child {
@@ -1740,12 +1765,12 @@
     }
 
     .footer__list {
-      border-top: 1px solid var(--color-grey);
+      border-top: 1px solid var(--color-gainsborough-bg);
     }
 
     .footer__list-item {
       margin-top: 31px;
-      border-bottom: 1px solid var(--color-grey);
+      border-bottom: 1px solid var(--color-gainsborough-bg);
     }
 
     .footer__list-item:last-child {
